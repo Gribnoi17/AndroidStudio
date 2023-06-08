@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ru.mirea.gribanovdv.mireaproject.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="ru.mirea.gribanovdv.mireaproject.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="ru.mirea.gribanovdv.mireaproject.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" />
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.DataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data" />
+    <fragment
+        android:id="@+id/audioBookFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.AudioBookFragment"
+        android:label="fragment_audio_book"
+        tools:layout="@layout/fragment_audio_book" />
+    <fragment
+        android:id="@+id/compasFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.CompasFragment"
+        android:label="fragment_compas"
+        tools:layout="@layout/fragment_compas" />
+    <fragment
+        android:id="@+id/takePhotoFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.TakePhotoFragment"
+        android:label="fragment_take_photo"
+        tools:layout="@layout/fragment_take_photo" />
+    <fragment
+        android:id="@+id/microFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.MicroFragment"
+        android:label="fragment_micro"
+        tools:layout="@layout/fragment_micro" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/workWithFilesFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.WorkWithFilesFragment"
+        android:label="fragment_work_with_files"
+        tools:layout="@layout/fragment_work_with_files" />
+    <fragment
+        android:id="@+id/establishmentsFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.EstablishmentsFragment"
+        android:label="fragment_establishments"
+        tools:layout="@layout/fragment_establishments" />
+    <fragment
+        android:id="@+id/firebaseFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.FirebaseFragment"
+        android:label="fragment_firebase"
+        tools:layout="@layout/fragment_firebase" />
+    <fragment
+        android:id="@+id/inetFragment"
+        android:name="ru.mirea.gribanovdv.mireaproject.InetFragment"
+        android:label="fragment_inet"
+        tools:layout="@layout/fragment_inet" />
+</navigation>

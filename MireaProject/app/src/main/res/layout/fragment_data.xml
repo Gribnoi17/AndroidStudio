@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#959E9F"
+        android:foregroundTint="#672B2B">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="414dp"
+            android:layout_height="299dp"
+            android:src="@drawable/nik"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="392dp"
+            android:layout_height="309dp"
+            android:layout_marginTop="368dp"
+            android:text="Магия – это не так уж сложно. Тем более если вы обладаете системным мышлением и умеете программировать…
+
+Обыкновенный «компьютерщик» попадает в мир, в котором ему удается применить свои способности в области, доселе такому «кощунству» не подвергавшейся. Логика и знания нашего с вами современника находят применение в ином, магическом, мире. И не просто помогают ему выжить, но делают его одним из самых могущественных магов, «первым среди равных». Чистая логика плюс компьютер и «никакого мошенства»! Если не считать Умника – надежного друга, помощника и советчика на случай самых непредвиденных ситуаций. Ну в самом деле, кто мы без друзей? И кого волнует, что он не из живой плоти, а инопланетный компьютер?"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Описание:"
+            android:textColor="#07730C"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="Автор: "
+            android:textColor="#FFA31A"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="16dp"
+            android:text="Анджей Ясинский"
+            android:textColor="#F6A733"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
