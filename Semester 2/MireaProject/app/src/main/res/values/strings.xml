@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MireaProject</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Grigoriev Aleksandr</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="data_fragment">DataFragment</string>
+    <string name="web_view_fragment">WebViewFragment</string>
+    <string name="service_fragment">ServiceFragment</string>
+    <string name="sensor_fragment">SensorFragment</string>
+    <string name="camera_fragment">CameraFragment</string>
+    <string name="record_fragment">RecordFragment</string>
+    <string name="profile_fragment">ProfileFragment</string>
+    <string name="file_fragment">FileFragment</string>
+    <string name="internet_fragment">InternetFragment</string>
+    <string name="map_fragment">MapFragment</string>
+</resources>

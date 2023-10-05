@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:title="@string/data_fragment"
+            android:id="@+id/dataFragment"
+            android:icon="@drawable/ic_menu_data"/>
+        <item
+            android:title="@string/web_view_fragment"
+            android:id="@+id/webViewFragment"
+            android:icon="@drawable/ic_menu_web"/>
+        <item
+            android:title="@string/service_fragment"
+            android:id="@+id/serviceFragment"
+            android:icon="@drawable/ic_menu_mediaplayer"/>
+        <item
+            android:title="@string/sensor_fragment"
+            android:id="@+id/sensorFragment"
+            android:icon="@drawable/ic_menu_sensor"/>
+        <item
+            android:title="@string/camera_fragment"
+            android:id="@+id/cameraFragment"
+            android:icon="@drawable/ic_menu_photo_camera"/>
+        <item
+            android:title="@string/record_fragment"
+            android:id="@+id/recordFragment"
+            android:icon="@drawable/ic_menu_record"/>
+        <item
+            android:title="@string/profile_fragment"
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_menu_profile"/>
+        <item
+            android:title="@string/file_fragment"
+            android:id="@+id/fileFragment"
+            android:icon="@drawable/ic_menu_files"/>
+        <item
+            android:title="@string/internet_fragment"
+            android:id="@+id/internetFragment"
+            android:icon="@drawable/ic_menu_internet"/>
+        <item
+            android:title="@string/map_fragment"
+            android:id="@+id/mapFragment"
+            android:icon="@drawable/ic_menu_map"/>
+    </group>
+</menu>

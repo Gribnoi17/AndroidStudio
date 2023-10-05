@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".SensorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="797dp">
+
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="317dp"
+            android:layout_height="34dp"
+            android:text="Отклонение от севера: 0.0"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.104" />
+
+        <ImageView
+            android:id="@+id/static_compass_img"
+            android:layout_width="357dp"
+            android:layout_height="445dp"
+            android:src="@drawable/img_compass_static"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHeader"
+            app:layout_constraintVertical_bias="0.457" />
+
+        <ImageView
+            android:id="@+id/dynamic_compass_img"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_compass_dinamic"
+            app:layout_constraintBottom_toBottomOf="@+id/static_compass_img"
+            app:layout_constraintEnd_toEndOf="@+id/static_compass_img"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/static_compass_img"
+            app:layout_constraintTop_toTopOf="@+id/static_compass_img"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

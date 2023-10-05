@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3BF44336"
+    tools:context=".DataFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="400dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="16dp"
+                android:background="#8360C3"
+                android:text="Компьютерная криминалистика"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="403dp"
+                android:layout_height="162dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Компьютерная криминалистика - это раздел форензики, который специализируется на изучении и анализе цифровых данных в целях раскрытия и расследования компьютерных преступлений. Она охватывает широкий спектр деятельности, связанной с исследованием компьютерных систем, сетей и электронных устройств с целью обнаружения, анализа и сбора электронных доказательств."
+                android:textAlignment="inherit"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+            <TextView
+                android:id="@+id/subtitleTextView"
+                android:layout_width="201dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="12dp"
+                android:text="Извлечение данных"
+                android:textAlignment="center"
+                android:textColor="#8360C3"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+
+            <TextView
+                android:id="@+id/descriptionTextView2"
+                android:layout_width="207dp"
+                android:layout_height="282dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="monospace"
+                android:text="Этот раздел занимается извлечением данных из компьютерных систем, цифровых носителей и электронных устройств, включая жесткие диски, смартфоны, планшеты и прочие устройства хранения информации. Специалисты по извлечению данных используют специальные инструменты и методы для извлечения удаленных, зашифрованных или скрытых данных."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subtitleTextView" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="196dp"
+                android:layout_height="240dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/descriptionTextView2"
+                app:layout_constraintTop_toBottomOf="@+id/subtitleTextView" />
+
+            <TextView
+                android:id="@+id/subtitleTextView2"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:text="Анализ цифровых следов"
+                android:textAlignment="center"
+                android:textColor="#8360C3"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView2" />
+
+            <TextView
+                android:id="@+id/descriptionTextView3"
+                android:layout_width="234dp"
+                android:layout_height="256dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="monospace"
+                android:text="Этот раздел занимается анализом цифровых следов, найденных на компьютерах и в компьютерных сетях. Это включает анализ интернет-активности, электронной почты, метаданных файлов, браузерной истории, а также поиск и идентификацию цифровых следов, таких как фрагменты удаленной информации или измененные файлы."
+                android:textAlignment="viewEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subtitleTextView2" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="158dp"
+                android:layout_height="251dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/digital_footprints"
+                app:layout_constraintEnd_toStartOf="@+id/descriptionTextView3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subtitleTextView2" />
+
+            <TextView
+                android:id="@+id/subtitleTextView3"
+                android:layout_width="250dp"
+                android:layout_height="36dp"
+                android:text="Кибербезопасность"
+                android:textAlignment="center"
+                android:textColor="#8360C3"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView3" />
+
+            <TextView
+                android:id="@+id/descriptionTextView4"
+                android:layout_width="391dp"
+                android:layout_height="165dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="monospace"
+                android:text="Этот раздел компьютерной криминалистики ориентирован на предотвращение и обнаружение компьютерных атак и нарушений безопасности. Специалисты по кибербезопасности разрабатывают и применяют меры защиты информации, проводят аудиты безопасности и расследуют инциденты безопасности с целью идентификации и наказания злоумышленников."
+                android:textAlignment="gravity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/subtitleTextView3" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="400dp"
+                android:layout_height="282dp"
+                android:src="@drawable/cybersecurity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
