@@ -1,9 +1,13 @@
 package ru.mirea.grigoriev.mireaproject;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.provider.Settings.Secure;
 import android.util.Log;
@@ -18,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import ru.mirea.grigoriev.mireaproject.databinding.ActivityAuthorizationBinding;
@@ -29,7 +35,6 @@ public class AuthorizationActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +43,8 @@ public class AuthorizationActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         String deviceId = Secure.getString(getContentResolver(), Secure.ANDROID_ID);
+
+        checkExcList();
 
         binding.buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,9 +61,8 @@ public class AuthorizationActivity extends AppCompatActivity {
                 String email = String.valueOf(binding.editTextEmail.getText());
                 String pass = String.valueOf(binding.editTextTextPassword.getText());
                 binding.textViewID.setText(String.format("Device_ID:%s", deviceId));
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("android_ids");
-                myRef.setValue(deviceId);
+                DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("UserID");
+                database.push().setValue(deviceId);
                 createAccount(email, pass);
 
             }
@@ -68,6 +74,26 @@ public class AuthorizationActivity extends AppCompatActivity {
                 sendEmailVerification();
             }
         });
+    }
+
+
+    private void checkExcList() {
+        List<String> exceptionList = new ArrayList<>();
+        exceptionList.add("com.anydesk.anydeskandroid");
+        exceptionList.add("com.anydesk.adcontrol.ad1");
+
+        List<ApplicationInfo> packages = getPackageManager().getInstalledApplications(PackageManager.GET_META_DATA);
+
+        for (ApplicationInfo packageInfo : packages) {
+            if (exceptionList.contains(packageInfo.packageName)){
+                Intent intent = new Intent(this, WarningActivity.class);
+                startActivity(intent);
+            }
+            Log.d(TAG, "Installed package :" + packageInfo.packageName);
+            //Log.d(TAG, "Source dir : " + packageInfo.sourceDir);
+            //Log.d(TAG, "Launch Activity :" + getPackageManager().getLaunchIntentForPackage(packageInfo.packageName));
+
+        }
     }
 
     @Override

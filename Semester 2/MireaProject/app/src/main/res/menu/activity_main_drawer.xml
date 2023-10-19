@@ -56,5 +56,9 @@
             android:title="@string/map_fragment"
             android:id="@+id/mapFragment"
             android:icon="@drawable/ic_menu_map"/>
+        <item
+            android:title="AppsFragment"
+            android:id="@+id/appsFragment"
+            android:icon="@drawable/ic_menu_apps"/>
     </group>
 </menu>
