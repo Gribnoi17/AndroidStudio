@@ -42,7 +42,7 @@ public class FireBaseLoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 createAccount(binding.editemail.getText().toString(), binding.editpassword.getText().toString());
                 byte[] password = binding.editpassword.getText().toString().getBytes(StandardCharsets.UTF_8);
-                byte[] hash = SHA256.hash(password);
+                byte[] hash = SHA256.getInstance().digest(password);
                 StringBuilder sb = new StringBuilder();
                 for (byte b : hash) {
                     sb.append(String.format("%02X ", b));
