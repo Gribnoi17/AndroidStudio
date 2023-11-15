@@ -1,4 +1,4 @@
-package ru.mirea.gribanovdv.mireaproject.ui;
+package ru.mirea.gribanovdv.mireaproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,10 +14,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
-import ru.mirea.gribanovdv.mireaproject.MainActivity;
 import ru.mirea.gribanovdv.mireaproject.databinding.ActivityFireBaseLoginBinding;
+import ru.mirea.gribanovdv.mireaproject.sha.SHA256;
 
 public class FireBaseLoginActivity extends AppCompatActivity {
 
@@ -34,13 +35,19 @@ public class FireBaseLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signIn(binding.editemail.getText().toString(), binding.editpassword.getText().toString());
-
             }
         });
         binding.buttoncreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createAccount(binding.editemail.getText().toString(), binding.editpassword.getText().toString());
+                byte[] password = binding.editpassword.getText().toString().getBytes(StandardCharsets.UTF_8);
+                byte[] hash = SHA256.hash(password);
+                StringBuilder sb = new StringBuilder();
+                for (byte b : hash) {
+                    sb.append(String.format("%02X ", b));
+                }
+                binding.textView10.setText(sb.toString());
             }
         });
         binding.buttonverify.setOnClickListener(new View.OnClickListener() {

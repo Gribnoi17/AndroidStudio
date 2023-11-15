@@ -59,7 +59,7 @@
             android:theme="@style/Theme.MireaProject.NoActionBar" >
         </activity>
         <activity
-            android:name=".ui.FireBaseLoginActivity"
+            android:name=".FireBaseLoginActivity"
             android:exported="true"
             android:label="Firebase"
             android:theme="@style/Theme.MireaProject.NoActionBar">
